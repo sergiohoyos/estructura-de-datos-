@@ -1,0 +1,60 @@
+#pragma once
+#include <iostream>
+using namespace std;
+class triangulo
+{
+private :
+		float altura;
+	    float base;
+public:
+	triangulo(float _altura , float _base);
+	~triangulo(void);
+	float Area();
+};
+
+
+#include "StdAfx.h"
+#include "triangulo.h"
+#include <iostream>
+
+
+triangulo::triangulo(float _altura , float _base)
+{
+		altura= _altura;
+		base= _base;
+}
+
+
+triangulo::~triangulo(void)
+{
+}
+
+float triangulo::Area()
+{
+	float aux;
+	aux=(base*altura)/2;
+	return aux;
+
+
+}
+
+// ej2.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+
+#include "conio.h"
+#include <iostream>
+using namespace std;
+#include "triangulo.h"
+
+
+  void main()
+	 {
+		 triangulo t1(10,5);
+
+		 cout<<"area es"<< t1.Area();
+		  getch();
+  }
+
+
