@@ -1,0 +1,56 @@
+#pragma once
+class cuadrado
+{
+private:
+	float lado;
+public:
+	cuadrado(float _lado);
+	~cuadrado(void);
+	float perimetro();
+	float area();
+
+};
+
+#include "pch.h"
+#include "cuadrado.h"
+#include <iostream>
+using namespace std;
+
+
+cuadrado::cuadrado(float _lado)
+{
+	lado = _lado;
+}
+
+
+cuadrado::~cuadrado()
+{
+
+}
+float cuadrado::area()
+{
+
+	float aux;
+	aux =4  * lado;
+	return aux;
+
+}
+#include "pch.h"
+#include <iostream>
+#include "conio.h"
+#include "cuadrado.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float valor;
+	cout << "introducir tamaño del cuadrado" << "  ";
+	cin >> valor;
+	cuadrado c1(valor);
+		cout << "el area del cuadrado es" <<  c1.area() << "  ";
+
+		
+
+}
+
