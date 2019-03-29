@@ -1,0 +1,126 @@
+#pragma once
+class matriz
+{
+private:
+	int M[10][10];
+	int m,n;
+public:
+	matriz(int _m , int _n);
+	~matriz(void);
+	void cargarmat();
+	void devol(int _M[10][10]);
+	void sumarmat(int _M1[10][10],int _M2[10][10],int _n,int _m,int _M[10][10] );
+	void mostrarmat();
+};
+
+#include "StdAfx.h"
+#include "matriz.h"
+#include<iostream>
+using namespace std;
+
+
+matriz::matriz(int _m, int _n)
+{
+	m= _m;
+	n= _n;
+}
+
+
+matriz::~matriz(void)
+{
+}
+void matriz::cargarmat()
+{
+	for(int i=0;i<n;i++)
+	{
+	   for(int j=0;j<m;j++)
+	   {
+		   cout<<"ingrese M["<<i<<"]["<<j<<"]=";
+		   cin>>M[i][j];
+	   }
+	
+	}
+ 	}
+	void sumarmat(int _M1[10][10],int _M2[10][10] , int m , int n,int M[10][10])
+	{
+	for(int i=0;i<n;i++)
+	{
+	   for(int j=0;j<m;j++)
+	   {
+		  M[i][j]=_M1[i][j]+_M2[i][j];
+	   }
+	
+	}
+	
+	
+	
+	}
+void matriz::devol(int M[10][10])
+
+{
+ for(int i=0;i<n;i++)
+	{
+	   for(int j=0;j<m;j++)
+	   {
+		   M[i][j]=M[i][j];
+	   }
+	
+	}
+
+
+}
+
+
+	void matriz::mostrarmat()
+{
+
+	for(int i=0;i<n;i++)
+	{
+	   for(int j=0;j<m;j++)
+	   {
+		   cout<<"ingrese M["<<i<<"]["<<j<<"]=";
+		  
+	   }
+	
+	}
+
+	}
+  #include "conio.h"
+#include<iostream>
+using namespace std;
+
+
+void main(){
+
+	int nrow,ncol,MAT[10][10],MAT1[10][10],MAT2[10][10];
+	do{
+		cout<<"ingrese el numero de filas :";
+		cin>>nrow;
+	}
+	while (nrow<0 || nrow>10);
+	do{
+		cout<<"ingrese el numero de filas :";
+		cin>>ncol;
+	}
+	while (ncol<0 || ncol>10);
+	matriz m1(nrow,ncol);
+	matriz m2(nrow,ncol);
+   
+	m1.cargarmat();
+	m1.devol(MAT1);
+    m2.cargarmat();
+	m1.devol(MAT2);
+    
+	matriz m3(nrow,ncol);
+	m3.sumarmat(MAT1,MAT2);
+	cout<<"la matriz resultante es";
+	m3.mostrarmat();
+	getch();
+
+
+	
+
+
+
+}
+
