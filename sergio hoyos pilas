@@ -1,3 +1,6 @@
+#pragma once
+#include <iostream>
+using namespace std
 #define STACK_SIZE 256 /* capacidad máxima */
 typedef char arreglo[STACK_SIZE];
  
